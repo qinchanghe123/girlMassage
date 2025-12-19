@@ -93,13 +93,7 @@
 
       /* Home Section */
       .home {
-        /* Background set to 2.avif with a dark overlay for text readability */
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('2.avif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        /* Fallback color if image fails to load */
-        background-color: #764ba2; 
+        position: relative;
         height: 90vh;
         display: flex;
         flex-direction: column;
@@ -107,9 +101,20 @@
         justify-content: center;
         color: white;
         text-align: center;
-        position: relative;
-        margin-top: -70px;
+        margin-top: -70px; /* Counteract body padding */
         padding-top: 70px;
+        
+        /* Background Configuration - Updated to .jpg for maximum compatibility */
+        background-color: #764ba2; /* Fallback color */
+        
+        /* Explicitly simplified background property */
+        background-image: 
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+          url('2.jpg');
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .home-content {
